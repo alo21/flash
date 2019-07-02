@@ -4,14 +4,15 @@ import {createStore} from "redux";
 import {Provider} from 'react-redux';
 import reducer from './Redux/reducer'
 import {TabNavigator, StackNavigator} from 'react-navigation';
+import Home from './Home'
 
-function Home() {
-    return (
-        <View>
-            <Text>Home</Text>
-        </View>
-    )
-}
+// function Home() {
+//     return (
+//         <View>
+//             <Text>Home</Text>
+//         </View>
+//     )
+// }
 
 function Dashboard() {
     return (
@@ -35,8 +36,6 @@ export default function App() {
         <Provider store={createStore(reducer)}>
             <View style={styles.container}>
                 <Tabs />
-
-                <Text>Open up App.js to start working on your APP!</Text>
             </View>
         </Provider>
     );
