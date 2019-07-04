@@ -8,11 +8,11 @@ import Home from './Home'
 import NewDeck from './NewDeck'
 
 
-const Tabs = TabNavigator({
+const Tab = TabNavigator({
     Home: {
         screen: Home,
     },
-    Dashboard: {
+    NewDeck: {
         screen: NewDeck
     }
 });
@@ -21,7 +21,7 @@ export default function App() {
     return (
         <Provider store={createStore(reducer)}>
             <View style={styles.container}>
-                <Tabs />
+                <Tab />
             </View>
         </Provider>
     );
@@ -30,7 +30,7 @@ export default function App() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
+        backgroundColor: 'gray',
         // alignItems: 'center',
         // justifyContent: 'center',
     },
